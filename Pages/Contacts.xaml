@@ -9,22 +9,66 @@
       Title="Contacts">
 
     <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,349.6" Background="White">
-            <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Source="\Resources\logo.png"/>
-            <Label Content="Электронная приемная кампания" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="19"/>
-            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid Margin="0,60,0,-0.4">
-            <Label Content="Контакты" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <Label Content="Домашний номер:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="131"/>
-            <TextBox HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="372"/>
-            <Label Content="Мобильный номер:" HorizontalAlignment="Left" Margin="418,40,0,0" VerticalAlignment="Top" Width="132"/>
-            <TextBox HorizontalAlignment="Right" Margin="0,70,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="372"/>
-            <Label Content="Электронный адрес:" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="131"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="780"/>
+        <!-- Шапка -->
+        <Border Grid.Row="0" Background="White" Padding="15,10" BorderThickness="0,0,0,1" BorderBrush="LightGray">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
-        </Grid>
+                <Image Grid.Column="0" Height="40" Width="40" Source="/Resources/logo.png" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center">
+                    <TextBlock Text="Электронная приемная кампания" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Text="Пермского авиационного техникума им. А. Д. Швецова" FontSize="13" Margin="0,2,0,0"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Контент -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Контакты" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                <Grid Grid.Row="1" Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Домашний номер:" Margin="0,0,0,5"/>
+                        <TextBox Height="35"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Мобильный номер:" Margin="0,0,0,5"/>
+                        <TextBox Height="35"/>
+                    </StackPanel>
+                    
+                </Grid>
+                <TextBlock Grid.Row="2" Text="Электронный адрес:" Margin="0,10,0,5"/>
+                <TextBox Grid.Row="3" Height="35" Margin="0,0,0,20"/>
+                <Grid Grid.Row="6"/>
+                <Button Grid.Row="7" Content="Продолжить" Height="25" MinWidth="150" HorizontalAlignment="Right" Click="Navigation"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

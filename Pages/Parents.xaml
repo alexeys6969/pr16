@@ -5,88 +5,131 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Submission_of_Applications_Shashin.Pages"
       mc:Ignorable="d" d:DesignWidth="800"
-      Title="Parents" Height="963">
+      Title="Parents" Background="#F8F9FA">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-    <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,349.6" Background="White">
-            <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Source="\Resources\logo.png"/>
-            <Label Content="Электронная приемная кампания" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="19"/>
-            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid Margin="0,60,0,-0.4">
-            <ScrollViewer VerticalScrollBarVisibility="Visible">
-                <StackPanel Margin="10">
-                    <Label Content="Сведения о родителях (законных представителях)" FontWeight="Bold"/>
-                    <Label Content="Выберите один из вариантов:" Background="{x:Null}" FontSize="10" Foreground="Red"/>
+        <!-- Шапка -->
+        <Border Grid.Row="0" Background="White" Padding="15,10" BorderThickness="0,0,0,1" BorderBrush="LightGray">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                    <Label Content="Мать (или законный представитель)" FontStyle="Italic"/>
-                    <Label Content="Фамилия, имя, отчество (полностью)"/>
-                    <TextBox Margin="0,0,0,10" Width="763"/>
-                    <Label Content="Дата рождения:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-                    <Label Content="Место работы:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-                    <Label Content="Должность:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-                    <Label Content="Место жительства:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-
-                    <Grid Margin="0,0,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Column="0">
-                            <Label Content="Домашний телефон:"/>
-                            <Label Content="(при наличии)" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="20,-10,0,0"/>
-                            <TextBox Width="365"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="1">
-                            <Label Content="Сотовый телефон:"/>
-                            <Label Content="(при наличии)" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="20,-10,0,0"/>
-                            <TextBox Width="371"/>
-                        </StackPanel>
-                    </Grid>
-
-                    <CheckBox Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" Margin="0,10,0,20"/>
-
-                    <Label Content="Отец (или законный представитель)" FontStyle="Italic"/>
-                    <Label Content="Фамилия, имя, отчество (полностью)"/>
-                    <TextBox Margin="0,0,0,10" Width="763"/>
-                    <Label Content="Дата рождения:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-                    <Label Content="Место работы:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-                    <Label Content="Должность:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-                    <Label Content="Место жительства:"/>
-                    <TextBox Margin="0,0,0,10" Width="762"/>
-
-                    <Grid Margin="0,0,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel Grid.Column="0">
-                            <Label Content="Домашний телефон:"/>
-                            <Label Content="(при наличии)" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="20,-10,0,0"/>
-                            <TextBox Width="374"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="1">
-                            <Label Content="Сотовый телефон:"/>
-                            <Label Content="(при наличии)" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="20,-10,0,0"/>
-                            <TextBox Width="372"/>
-                        </StackPanel>
-                    </Grid>
-
-                    <CheckBox Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" Margin="0,10,0,0"/>
-                    <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
+                <Image Grid.Column="0" Height="45" Width="45" Source="/Resources/logo.png" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center">
+                    <TextBlock Text="Электронная приемная кампания" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Text="Пермского авиационного техникума им. А. Д. Швецова" FontSize="13" Margin="0,2,0,0"/>
                 </StackPanel>
-            </ScrollViewer>
-        </Grid>
+            </Grid>
+        </Border>
+
+        <!-- Контент -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="20" Background="White">
+
+                <!-- Заголовок -->
+                <TextBlock Text="Сведения о родителях (законных представителях)" 
+                      FontWeight="Bold" FontSize="18" Margin="0,0,0,10"/>
+                <TextBlock Text="Выберите один из вариантов:" 
+                      FontSize="11" Foreground="Red" Margin="0,0,0,20"/>
+
+                <!-- Секция МАТЬ -->
+                <TextBlock Text="Мать (или законный представитель)" 
+                      FontStyle="Italic" FontSize="15" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Фамилия, имя, отчество (полностью)" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Дата рождения:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Место работы:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Должность:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Место жительства:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <!-- Телефоны матери -->
+                <Grid Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Домашний телефон:" Margin="0,0,0,5"/>
+                        <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
+                        <TextBox Height="35"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Мобильный телефон:" Margin="0,0,0,5"/>
+                        <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
+                        <TextBox Height="35"/>
+                    </StackPanel>
+                </Grid>
+
+                <CheckBox Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" 
+                     Margin="0,10,0,25" FontSize="12"/>
+
+                <!-- Секция ОТЕЦ -->
+                <TextBlock Text="Отец (или законный представитель)" 
+                      FontStyle="Italic" FontSize="15" Margin="0,20,0,10"/>
+
+                <TextBlock Text="Фамилия, имя, отчество (полностью)" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Дата рождения:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Место работы:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Должность:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Место жительства:" Margin="0,0,0,5"/>
+                <TextBox Height="35" Margin="0,0,0,15"/>
+
+                <!-- Телефоны отца -->
+                <Grid Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Домашний телефон:" Margin="0,0,0,5"/>
+                        <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
+                        <TextBox Height="35"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Мобильный телефон:" Margin="0,0,0,5"/>
+                        <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
+                        <TextBox Height="35"/>
+                    </StackPanel>
+                </Grid>
+
+                <CheckBox Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" 
+                     Margin="0,10,0,25" FontSize="12"/>
+
+                <Button Content="Продолжить" Height="25" 
+                   MinWidth="160" 
+                   Margin="0,20,0,10" HorizontalAlignment="Right"
+                   />
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

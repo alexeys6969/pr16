@@ -31,7 +31,7 @@
             <Label Content="Год окончания образовательной организации" Margin="12,266,0,0"/>
             <TextBox Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
 
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
+            <Button Click="Navigation" Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
         </Grid>
     </Grid>
 </Page>

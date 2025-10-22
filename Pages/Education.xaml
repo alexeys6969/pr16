@@ -9,36 +9,94 @@
       Title="Education">
 
     <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,349.6" Background="White">
-            <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Source="\Resources\logo.png"/>
-            <Label Content="Электронная приемная кампания" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="19"/>
-            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Height="40" Width="40" Source="\Resources\logo.png" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="15,10,10,10">
+                <Label Content="Электронная приемная кампания" FontWeight="Bold" FontSize="19"/>
+                <Label Content="Пермского авиационного техникума им. А. Д. Швецова"/>
+            </StackPanel>
         </Grid>
-        <Grid Margin="0,60,0,-0.4">
-            <Label Content="Сведения об образовании" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Label Content="База:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20,67,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10" Foreground="Red"/>
-            <RadioButton Content="9 классов" HorizontalAlignment="Left" Margin="22,91,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="11 классов" HorizontalAlignment="Left" Margin="22,106,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="СПО" HorizontalAlignment="Left" Margin="22,121,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="ВПО" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top"/>
 
-            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="22,158,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10" Foreground="Red"/>
-            <RadioButton Content="Аттестат" HorizontalAlignment="Left" Margin="22,181,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Диплом" HorizontalAlignment="Left" Margin="22,196,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
+                <Label Grid.Row="0" Content="Сведения об образовании" FontWeight="Bold" Margin="0,0,0,20"/>
 
+                <Label Grid.Row="1" Content="База:" Margin="0,0,0,5"/>
+                <Label Grid.Row="2" Content="Выберите один из вариантов:" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,10"/>
 
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
-            <Label Content="Серия и номер документа об образовании:" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="350"/>
-            <TextBox HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="24"/>
-            <Label Content="Средний балл (до сотых):" HorizontalAlignment="Right" Margin="0,214,10,0" VerticalAlignment="Top" Width="350"/>
-            <TextBox HorizontalAlignment="Right" Margin="0,245,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" Height="24"/>
-            <Label Content="Прикрепите сканы страниц документа об образовании с Ф.И.О., наименованием образовательной организации и оценками" Margin="10,275,10,90"/>
-            <Label Content="(Формат документов должен быть PNG, JPEG или PDF, а максимальный размер каждого файла 5 МБ)" HorizontalAlignment="Left" Margin="20,305,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10" Foreground="Red"/>
-            <TextBox HorizontalAlignment="Left" Margin="20,328,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Height="24" Width="690"/>
-            <Button Content="Выбрать ..." HorizontalAlignment="Right" Margin="0,0,10,38" VerticalAlignment="Bottom" Width="75" Height="25"/>
+                <RadioButton Grid.Row="3" Content="9 классов" Margin="10,0,0,5"/>
+                <RadioButton Grid.Row="4" Content="11 классов" Margin="10,0,0,5"/>
+                <RadioButton Grid.Row="5" Content="СПО" Margin="10,0,0,5"/>
+                <RadioButton Grid.Row="6" Content="ВПО" Margin="10,0,0,20"/>
 
-        </Grid>
+                <Label Grid.Row="7" Content="Выберите один из вариантов:" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,10"/>
+                <RadioButton Grid.Row="8" Content="Аттестат" Margin="10,0,0,5"/>
+                <RadioButton Grid.Row="9" Content="Диплом" Margin="10,0,0,20"/>
+
+                <Grid Grid.Row="10" Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Серия и номер документа об образовании:"/>
+                    <Label Grid.Column="2" Content="Средний балл (до сотых):"/>
+                </Grid>
+
+                <Grid Grid.Row="11" Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Height="24"/>
+                    <TextBox Grid.Column="2" Height="24"/>
+                </Grid>
+
+                <Label Grid.Row="12" Content="Прикрепите сканы страниц документа об образовании с Ф.И.О., наименованием образовательной организации и оценками" Margin="0,0,0,5"/>
+                <Label Grid.Row="13" Content="(Формат документов должен быть PNG, JPEG или PDF, а максимальный размер каждого файла 5 МБ)" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,5"/>
+
+                <Grid Grid.Row="14" Margin="10,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Height="24" Margin="0,0,10,0"/>
+                    <Button Grid.Column="1" Content="Выбрать ..." Width="75" Height="25"/>
+                </Grid>
+
+                <Button Grid.Row="15" Content="Продолжить" HorizontalAlignment="Right" Width="150" Height="25" Click="Navigation"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

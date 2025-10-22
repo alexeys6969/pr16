@@ -24,5 +24,10 @@ namespace Submission_of_Applications_Shashin.Pages
         {
             InitializeComponent();
         }
+
+        private void Navigation(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Passport());
+        }
     }
 }
