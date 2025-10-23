@@ -59,27 +59,27 @@
                 <Label Grid.Row="1" Content="Выберите специальность, на которой желаете учиться:" Margin="0,0,0,5"/>
                 <Label Grid.Row="2" Content="Можете выбрать несколько специальностей" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,10"/>
 
-                <CheckBox Grid.Row="3" Content="12.02.01 Авиационные приборы и комплексы" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="4" Content="15.02.09 Аддитивные технологии" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="5" Content="09.02.07 Информационные системы и программирование (Программист)" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="6" Content="09.02.07 Информационные системы и программирование (Разработчик веб и мультимедийных приложений)" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="7" Content="09.02.01 Компьютерные системы и комплексы" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="8" Content="22.02.03 Литейное производство черных и цветных металлов" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="9" Content="15.02.10 Мехатроника и мобильная робототехника" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="10" Content="09.02.05 Прикладная информатика (по отраслям)" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="11" Content="24.02.02 Производство авиационных двигателей" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="12" Content="12.02.03 Радиоэлектронные приборные устройства" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="13" Content="15.02.08 Технология машиностроения" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="14" Content="15.02.15 Технология металлообрабатывающего производства" Margin="10,0,0,5"/>
-                <CheckBox Grid.Row="15" Content="27.02.07 Управление качеством продукции, процессов и услуг" Margin="10,0,0,20"/>
+                <CheckBox Grid.Row="3" x:Name="CB1" Content="12.02.01 Авиационные приборы и комплексы" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="4" x:Name="CB2" Content="15.02.09 Аддитивные технологии" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="5" x:Name="CB3" Content="09.02.07 Информационные системы и программирование (Программист)" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="6" x:Name="CB4" Content="09.02.07 Информационные системы и программирование (Разработчик веб и мультимедийных приложений)" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="7" x:Name="CB5" Content="09.02.01 Компьютерные системы и комплексы" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="8" x:Name="CB6" Content="22.02.03 Литейное производство черных и цветных металлов" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="9" x:Name="CB7" Content="15.02.10 Мехатроника и мобильная робототехника" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="10" x:Name="CB8" Content="09.02.05 Прикладная информатика (по отраслям)" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="11" x:Name="CB9" Content="24.02.02 Производство авиационных двигателей" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="12" x:Name="CB10" Content="12.02.03 Радиоэлектронные приборные устройства" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="13" x:Name="CB11" Content="15.02.08 Технология машиностроения" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="14" x:Name="CB12" Content="15.02.15 Технология металлообрабатывающего производства" Margin="10,0,0,5"/>
+                <CheckBox Grid.Row="15" x:Name="CB13" Content="27.02.07 Управление качеством продукции, процессов и услуг" Margin="10,0,0,20"/>
 
                 <Label Grid.Row="16" Content="Среднее профессиональное образование получаю:" Margin="0,10,0,5"/>
                 <Label Grid.Row="17" Content="Выберите один из вариантов" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,10"/>
-                <RadioButton Grid.Row="18" Content="впервые" Margin="10,0,0,5"/>
-                <RadioButton Grid.Row="19" Content="не впервые" Margin="10,0,0,20"/>
+                <RadioButton x:Name="RB1" Grid.Row="18" Content="впервые" Margin="10,0,0,5"/>
+                <RadioButton x:Name="RB2" Grid.Row="19" Content="не впервые" Margin="10,0,0,20"/>
 
-                <CheckBox Grid.Row="20" Content="С лицензией на право осуществления образовательной деятельности, свидительством о государственной оккредитации, правилами приема и правилами внутренного распорялка обучающихся в данном образовательном учреждении, с Уставом Техникума ознакомлен(а)" Margin="10,10,0,5"/>
-                <CheckBox Grid.Row="21" Content="С датой представления оригиналов документов ознакомлен(а)" Margin="10,0,0,20"/>
+                <CheckBox Grid.Row="20" x:Name="cB1" Content="С лицензией на право осуществления образовательной деятельности, свидительством о государственной оккредитации, правилами приема и правилами внутренного распорялка обучающихся в данном образовательном учреждении, с Уставом Техникума ознакомлен(а)" Margin="10,10,0,5"/>
+                <CheckBox Grid.Row="21" x:Name="cB2" Content="С датой представления оригиналов документов ознакомлен(а)" Margin="10,0,0,20"/>
 
                 <Button Grid.Row="22" Content="Продолжить" HorizontalAlignment="Right" Width="150" Height="25" Click="Navigation"/>
             </Grid>

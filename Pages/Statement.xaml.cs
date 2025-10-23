@@ -27,6 +27,47 @@ namespace Submission_of_Applications_Shashin.Pages
 
         private void Navigation(object sender, RoutedEventArgs e)
         {
+            if (ochno.IsChecked == false && zaochno.IsChecked == false)
+            {
+                MessageBox.Show("Выберите форму обучения");
+                return;
+            }
+
+            if (free.IsChecked == false && dogovor.IsChecked == false)
+            {
+                MessageBox.Show("Выберите тип обучения");
+                return;
+            }
+
+            string Obr = obrOrg.Text;
+            string Oconch = godOconch.Text;
+
+            if (string.IsNullOrWhiteSpace(Obr))
+            {
+                MessageBox.Show("Введите сведения об образовательной организации");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(Oconch))
+            {
+                MessageBox.Show("Введите год окончания образовательной организации");
+                return;
+            }
+            try
+            {
+                int ocnch = int.Parse(Oconch);
+                if(ocnch <= 2000 || ocnch > 2025)
+                {
+                    MessageBox.Show("Введите корректный год окончания образовательной организации");
+                    return;
+                }
+
+            } catch 
+            {
+                MessageBox.Show("Введите корректный год окончания образовательной организации");
+                return;
+            }
+
             this.NavigationService.Navigate(new Education());
         }
     }

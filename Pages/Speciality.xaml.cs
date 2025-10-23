@@ -27,6 +27,34 @@ namespace Submission_of_Applications_Shashin.Pages
 
         private void Navigation(object sender, RoutedEventArgs e)
         {
+            int countSpecialization = 0;
+            for(int i = 1; i <= 13; i++)
+            {
+                string checkboxName = "CB" + i;
+                CheckBox checkBox = (CheckBox)this.FindName(checkboxName);
+                if(checkBox.IsChecked == true) 
+                    countSpecialization++;
+            }
+            if (countSpecialization > 5)
+            {
+                MessageBox.Show("Выбрано больше 5 специальностей");
+                return;
+            }
+            if(countSpecialization == 0)
+            {
+                MessageBox.Show("Выберите хотя бы 1 специальность");
+                return;
+            }
+            if(RB1.IsChecked == false && RB2.IsChecked == false)
+            {
+                MessageBox.Show("Выберите в какой раз вы получаете СПО");
+                return;
+            }
+            if (cB1.IsChecked == false || cB2.IsChecked == false)
+            {
+                MessageBox.Show("Согласитесь с условиями");
+                return;
+            }
             this.NavigationService.Navigate(new Passport());
         }
     }

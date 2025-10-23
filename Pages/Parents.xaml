@@ -43,21 +43,20 @@
                       FontStyle="Italic" FontSize="15" Margin="0,0,0,10"/>
 
                 <TextBlock Text="Фамилия, имя, отчество (полностью)" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="FIOM" Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Дата рождения:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="DOBM" Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Место работы:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="POWM" Height="24" Margin="0,0,0,15"/>
 
-                <TextBlock Text="Должность:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBlock x:Name="JTM" Text="Должность:" Margin="0,0,0,5"/>
+                <TextBox Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Место жительства:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
-
-                <!-- Телефоны матери -->
+                <TextBox x:Name="POLM" Height="24" Margin="0,0,0,15"/>
+                
                 <Grid Margin="0,0,0,15">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -68,17 +67,17 @@
                     <StackPanel Grid.Column="0">
                         <TextBlock Text="Домашний телефон:" Margin="0,0,0,5"/>
                         <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
-                        <TextBox Height="35"/>
+                        <TextBox x:Name="HPM" Height="24"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="2">
                         <TextBlock Text="Мобильный телефон:" Margin="0,0,0,5"/>
                         <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
-                        <TextBox Height="35"/>
+                        <TextBox x:Name="MPM" Height="24"/>
                     </StackPanel>
                 </Grid>
 
-                <CheckBox Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" 
+                <CheckBox x:Name="CB1" Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" 
                      Margin="0,10,0,25" FontSize="12"/>
 
                 <!-- Секция ОТЕЦ -->
@@ -86,19 +85,19 @@
                       FontStyle="Italic" FontSize="15" Margin="0,20,0,10"/>
 
                 <TextBlock Text="Фамилия, имя, отчество (полностью)" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="FIOF" Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Дата рождения:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="DOBF" Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Место работы:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="POWF" Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Должность:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="JTF" Height="24" Margin="0,0,0,15"/>
 
                 <TextBlock Text="Место жительства:" Margin="0,0,0,5"/>
-                <TextBox Height="35" Margin="0,0,0,15"/>
+                <TextBox x:Name="POLF" Height="24" Margin="0,0,0,15"/>
 
                 <!-- Телефоны отца -->
                 <Grid Margin="0,0,0,15">
@@ -111,20 +110,20 @@
                     <StackPanel Grid.Column="0">
                         <TextBlock Text="Домашний телефон:" Margin="0,0,0,5"/>
                         <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
-                        <TextBox Height="35"/>
+                        <TextBox x:Name="HPF" Height="24"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="2">
                         <TextBlock Text="Мобильный телефон:" Margin="0,0,0,5"/>
                         <TextBlock Text="(при наличии)" FontSize="10" Foreground="Red" Margin="15,0,0,5"/>
-                        <TextBox Height="35"/>
+                        <TextBox x:Name="MPF" Height="24"/>
                     </StackPanel>
                 </Grid>
 
-                <CheckBox Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" 
+                <CheckBox x:Name="CB2" Content="Настоящим подтверждаю, что персональные данные передаются третьим лицам" 
                      Margin="0,10,0,25" FontSize="12"/>
 
-                <Button Content="Продолжить" Height="25" 
+                <Button Click="Navigation" Content="Продолжить" Height="25" 
                    MinWidth="160" 
                    Margin="0,20,0,10" HorizontalAlignment="Right"
                    />

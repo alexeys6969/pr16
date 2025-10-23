@@ -79,19 +79,19 @@
                         <ColumnDefinition Width="20"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" Height="24"/>
-                    <TextBox Grid.Column="2" Height="24"/>
-                    <TextBox Grid.Column="4" Height="24"/>
+                    <TextBox x:Name="Name" Grid.Column="0" Height="24"/>
+                    <TextBox x:Name="FirstName" Grid.Column="2" Height="24"/>
+                    <TextBox x:Name="LastName" Grid.Column="4" Height="24"/>
                 </Grid>
 
                 <Label Grid.Row="3" Content="Дата рождения:" Margin="0,0,0,5"/>
-                <TextBox Grid.Row="4" Height="24" Margin="0,0,0,15"/>
+                <TextBox x:Name="DateOfBirth" Grid.Row="4" Height="24" Margin="0,0,0,15"/>
 
                 <Label Grid.Row="5" Content="Гражданство:" Margin="0,0,0,5"/>
-                <TextBox Grid.Row="6" Height="24" Margin="0,0,0,15"/>
+                <TextBox x:Name="Сitizenship" Grid.Row="6" Height="24" Margin="0,0,0,15"/>
 
                 <Label Grid.Row="7" Content="Место рождения:" Margin="0,0,0,5"/>
-                <TextBox Grid.Row="8" Height="24" Margin="0,0,0,20"/>
+                <TextBox x:Name="PlaceOfBirth" Grid.Row="8" Height="24" Margin="0,0,0,20"/>
 
                 <Grid Grid.Row="9" Margin="0,0,0,15">
                     <Grid.ColumnDefinitions>
@@ -114,13 +114,13 @@
                         <ColumnDefinition Width="20"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" Height="24"/>
-                    <TextBox Grid.Column="2" Height="24"/>
-                    <TextBox Grid.Column="4" Height="24"/>
+                    <TextBox x:Name="SeriesAndNumber" Grid.Column="0" Height="24"/>
+                    <TextBox x:Name="DateOfIssued" Grid.Column="2" Height="24"/>
+                    <TextBox x:Name="DepartamentCode" Grid.Column="4" Height="24"/>
                 </Grid>
 
                 <Label Grid.Row="11" Content="Кем выдан:" Margin="0,0,0,5"/>
-                <TextBox Grid.Row="12" Height="24" Margin="0,0,0,20"/>
+                <TextBox x:Name="Issued" Grid.Row="12" Height="24" Margin="0,0,0,20"/>
 
                 <Grid Grid.Row="13" Margin="0,0,0,15">
                     <Grid.ColumnDefinitions>
@@ -138,8 +138,8 @@
                         <ColumnDefinition Width="20"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" Height="24"/>
-                    <TextBox Grid.Column="2" Height="24"/>
+                    <TextBox x:Name="RegisteredAddress" Grid.Column="0" Height="24"/>
+                    <TextBox x:Name="District" Grid.Column="2" Height="24"/>
                 </Grid>
 
                 <Grid Grid.Row="15" Margin="0,0,0,15">
@@ -158,8 +158,8 @@
                         <ColumnDefinition Width="20"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" Height="24"/>
-                    <TextBox Grid.Column="2" Height="24"/>
+                    <TextBox x:Name="FacticAddress" Grid.Column="0" Height="24"/>
+                    <TextBox x:Name="FacticDisrtict" Grid.Column="2" Height="24"/>
                 </Grid>
 
                 <Label Grid.Row="17" Content="Прикрепите сканы страниц паспорта с фотографией и действующей пропиской" Margin="0,0,0,5"/>

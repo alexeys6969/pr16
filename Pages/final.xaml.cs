@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Submission_of_Applications_Shashin
+namespace Submission_of_Applications_Shashin.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для final.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class final : Page
     {
-        public MainWindow()
+        public final()
         {
             InitializeComponent();
-            frame.Navigate(new Pages.Parents());
         }
     }
 }

@@ -27,6 +27,11 @@ namespace Submission_of_Applications_Shashin.Pages
 
         private void Navigation(object sender, RoutedEventArgs e)
         {
+            if (RB1.IsChecked == false && RB2.IsChecked == false)
+            {
+                MessageBox.Show("Выберите документ воинского учета");
+                return;
+            }
             this.NavigationService.Navigate(new Speciality());
         }
     }

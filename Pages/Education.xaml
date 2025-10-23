@@ -4,8 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Submission_of_Applications_Shashin.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d" d:DesignWidth="800"
       Title="Education">
 
     <Grid Background="#F8F9FA">
@@ -54,14 +53,14 @@
                 <Label Grid.Row="1" Content="База:" Margin="0,0,0,5"/>
                 <Label Grid.Row="2" Content="Выберите один из вариантов:" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,10"/>
 
-                <RadioButton Grid.Row="3" Content="9 классов" Margin="10,0,0,5"/>
-                <RadioButton Grid.Row="4" Content="11 классов" Margin="10,0,0,5"/>
-                <RadioButton Grid.Row="5" Content="СПО" Margin="10,0,0,5"/>
-                <RadioButton Grid.Row="6" Content="ВПО" Margin="10,0,0,20"/>
+                <RadioButton x:Name="RB1" GroupName="EduBase" Grid.Row="3" Content="9 классов" Margin="10,0,0,5"/>
+                <RadioButton x:Name="RB2" GroupName="EduBase" Grid.Row="4" Content="11 классов" Margin="10,0,0,5"/>
+                <RadioButton x:Name="RB3" GroupName="EduBase" Grid.Row="5" Content="СПО" Margin="10,0,0,5"/>
+                <RadioButton x:Name="RB4" GroupName="EduBase" Grid.Row="6" Content="ВПО" Margin="10,0,0,20"/>
 
                 <Label Grid.Row="7" Content="Выберите один из вариантов:" Background="{x:Null}" FontSize="10" Foreground="Red" Margin="10,0,0,10"/>
-                <RadioButton Grid.Row="8" Content="Аттестат" Margin="10,0,0,5"/>
-                <RadioButton Grid.Row="9" Content="Диплом" Margin="10,0,0,20"/>
+                <RadioButton x:Name="RB5" GroupName="EduDoc" Grid.Row="8" Content="Аттестат" Margin="10,0,0,5"/>
+                <RadioButton x:Name="RB6" GroupName="EduDoc" Grid.Row="9" Content="Диплом" Margin="10,0,0,20"/>
 
                 <Grid Grid.Row="10" Margin="0,0,0,15">
                     <Grid.ColumnDefinitions>
@@ -70,7 +69,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Content="Серия и номер документа об образовании:"/>
-                    <Label Grid.Column="2" Content="Средний балл (до сотых):"/>
+                    <Label Grid.Column="2" Content="Средний балл (до сотых, через запятую):"/>
                 </Grid>
 
                 <Grid Grid.Row="11" Margin="0,0,0,15">
@@ -79,8 +78,8 @@
                         <ColumnDefinition Width="20"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Grid.Column="0" Height="24"/>
-                    <TextBox Grid.Column="2" Height="24"/>
+                    <TextBox x:Name="SeriesAndNumberPassport" Grid.Column="0" Height="24"/>
+                    <TextBox x:Name="AverageGrade" Grid.Column="2" Height="24"/>
                 </Grid>
 
                 <Label Grid.Row="12" Content="Прикрепите сканы страниц документа об образовании с Ф.И.О., наименованием образовательной организации и оценками" Margin="0,0,0,5"/>
