@@ -23,7 +23,7 @@ namespace Submission_of_Applications_Shashin
         public MainWindow()
         {
             InitializeComponent();
-            frame.Navigate(new Pages.Parents());
+            frame.Navigate(new Pages.Statement());
         }
     }
 }

@@ -76,10 +76,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Final.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Parents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,9 +103,6 @@
     </Compile>
     <Compile Include="Pages\Education.xaml.cs">
       <DependentUpon>Education.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Final.xaml.cs">
-      <DependentUpon>Final.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Parents.xaml.cs">
       <DependentUpon>Parents.xaml</DependentUpon>

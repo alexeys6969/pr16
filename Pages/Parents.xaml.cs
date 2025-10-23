@@ -119,6 +119,12 @@ namespace Submission_of_Applications_Shashin.Pages
                 MessageBox.Show("Введите корректный мобильный номер отца");
                 return;
             }
+            MessageBoxResult result = MessageBox.Show("Ваше заявление успешно отправлено\n Хотите закрыть приложение?", "Конец", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }
